@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Drink.java, edited by Oliver Souter 2004076
+ * Component 2 Part 1 - 5/1/2022
  */
 package uk.ac.rgu.cm2100.model;
 
@@ -31,12 +30,13 @@ public class Drink extends Model implements IMenuItem {
 
     @Override
     public String description() {
-        return this.name + "\t" + this.price + "p";
+        return "Drink: " + this.name + " - " + this.price + "p";
     }
     
     @Override
     public String toString(){
-        return this.description();
+        return this.name + " - " + this.price() + "p";
+        //return this.description();
     }
     
 }

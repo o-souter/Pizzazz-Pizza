@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.controllers.MenumanagerController">
+    <stylesheets>
+        <URL value="@/styles/menumanager.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="480.0" prefWidth="640.0">
+         <children>
+            <Text layoutX="178.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Manager">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <ListView fx:id="listMenuItems" layoutX="14.0" layoutY="107.0" onMouseClicked="#onItemSelect" prefHeight="327.0" prefWidth="215.0" />
+            <Button fx:id="btnDeleteItem" layoutX="10.0" layoutY="440.0" mnemonicParsing="false" onAction="#onDeleteItem" text="Delete" />
+            <Button fx:id="btnCreateItem" layoutX="147.0" layoutY="440.0" mnemonicParsing="false" onAction="#onCreatePizza" text="Create Pizza" />
+            <Button fx:id="btnBackToMenu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnBackClicked" text="Back to menu" />
+            <Label fx:id="lblItemDesc" layoutX="231.0" layoutY="103.0" prefHeight="93.0" prefWidth="406.0" text="..." />
+            <Text layoutX="272.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <ListView fx:id="listToppings" layoutX="422.0" layoutY="254.0" onMouseClicked="#onItemSelect" prefHeight="209.0" prefWidth="200.0" />
+            <Text layoutX="87.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item" />
+            <Text layoutX="473.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Toppings available" />
+            <ImageView fitHeight="114.0" fitWidth="132.0" layoutX="450.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pizzabasic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Order.java, edited by Oliver Souter 2004076
+ * Component 2 Part 1 - 4/1/2022
  */
 package uk.ac.rgu.cm2100.model;
 
@@ -17,15 +16,32 @@ import uk.ac.rgu.cm2100.model.IMenuItem.PriceComparator;
  * @author mark
  */
 public class Order implements IOrder {
-    
+    private String name;
     private List<IMenuItem> items;
+    private List<IMenuItem> itemsToAdd;
     
     public Order(){
         this.items = new ArrayList<>();
+        this.itemsToAdd = new ArrayList<>();
     }
     
     public void addItem(IMenuItem item){
         this.items.add(item);
+    }
+    public void addItems(List<IMenuItem> itemsToAdd) {
+        for (int i = 0; i <itemsToAdd.size(); i++) {
+            this.items.add(itemsToAdd.get(i));
+        }
+    }
+    public List getItems() {
+        return this.items;
+    }
+    
+    public void setOrderName(String name) {
+        this.name = name;
+    }
+    public String getOrderName() {
+        return this.name;
     }
     
     public void sortByName(){
@@ -69,7 +85,7 @@ public class Order implements IOrder {
     
     @Override
     public String toString(){
-        String toReturn = "";
+        String toReturn = this.name + "\n";
         
         for(IMenuItem item : this.items){
             toReturn += item + "\n";        

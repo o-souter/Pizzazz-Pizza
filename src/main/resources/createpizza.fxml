@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.rgu.cm2100.controllers.CreatepizzaController">
+    <stylesheets>
+        <URL value="@/styles/createpizza.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="btnCancel" prefHeight="480.0" prefWidth="640.0">
+         <children>
+            <Text layoutX="203.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Pizza">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <ListView fx:id="listToppings" layoutX="380.0" layoutY="118.0" onMouseClicked="#onToppingSelect" prefHeight="299.0" prefWidth="200.0" />
+            <TextField fx:id="txtPizzaName" layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="122.0" />
+            <Text layoutX="10.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Name" />
+            <ListView fx:id="listCrust" layoutX="170.0" layoutY="118.0" onMouseClicked="#onCrustSelect" prefHeight="299.0" prefWidth="200.0" />
+            <Button fx:id="btnCreatePizza" layoutX="9.0" layoutY="151.0" mnemonicParsing="false" onAction="#onCreatePizza" text="Create Pizza" />
+            <Button fx:id="btnAddTopping" layoutX="380.0" layoutY="420.0" mnemonicParsing="false" onAction="#onAddTopping" text="Add Topping" />
+            <Button fx:id="btnAddCrust" layoutX="222.0" layoutY="420.0" mnemonicParsing="false" onAction="#onAddCrust" text="Add Crust" />
+            <Text layoutX="219.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a crust" />
+            <Text layoutX="418.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Toppings!" />
+            <Button fx:id="btnNewTopping" layoutX="492.0" layoutY="420.0" mnemonicParsing="false" onAction="#onCreateTopping" text="New Topping" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

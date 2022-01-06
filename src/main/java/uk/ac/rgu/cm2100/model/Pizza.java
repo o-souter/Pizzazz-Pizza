@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Pizza.java, edited by Oliver Souter 2004076
+ * Component 2 Part 1 - 4/1/2022
  */
 package uk.ac.rgu.cm2100.model;
 
@@ -21,7 +20,7 @@ public class Pizza extends Model implements IMenuItem{
     
     private final int BASE_PRICE = 200; //base price for all pizzas before toppings
     
-    public Pizza(String name, Crust crust){
+    public Pizza(){
         this.name = name;
         this.crust = crust;
         this.toppings = new ArrayList<>();
@@ -47,21 +46,33 @@ public class Pizza extends Model implements IMenuItem{
     public String name() {
         return this.name;
     }
+    public Crust crust() {
+        return this.crust;
+    }
+    
 
     @Override
     public String description() {
-        String toReturn = this.name + "\t" + this.price() + "p\n" + "Crust: " + this.crust + "\nToppings:";
+        String toReturn = "Pizza: " + this.name + "\t" + this.price() + "p\n" + "Crust: " + this.crust + "\nToppings: ";
         
         for(PizzaTopping topping : this.toppings){
             toReturn += topping + ", ";
         }
         
+        toReturn = toReturn.substring(0, toReturn.length() - 2);
         return toReturn;
     }
     
     @Override
     public String toString(){
-        return this.name + "\t" + this.price() + "p";
+        return this.name + " - " + this.price() + "p";
+    }
+    
+    public void setCrust(Crust newCrust) {
+        this.crust = newCrust;
+    }
+    public void setName(String newName) {
+        this.name = newName;
     }
     
 }
