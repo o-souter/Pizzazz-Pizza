@@ -36,7 +36,5 @@ public class Drink extends Model implements IMenuItem {
     @Override
     public String toString(){
         return this.name + " - " + this.price() + "p";
-        //return this.description();
     }
-    
 }

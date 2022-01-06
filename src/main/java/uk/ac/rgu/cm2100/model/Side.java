@@ -36,7 +36,6 @@ public class Side implements IMenuItem {
     @Override
     public String toString(){
         return this.name + " - " + this.price() + "p";
-        //return this.description();
     }
 
 }

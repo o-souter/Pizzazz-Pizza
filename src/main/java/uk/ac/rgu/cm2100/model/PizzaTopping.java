@@ -29,8 +29,6 @@ public class PizzaTopping {
         this.price = newPrice;
     }
             
-    
-    
     public int getPrice(){
         return this.price;
     }
