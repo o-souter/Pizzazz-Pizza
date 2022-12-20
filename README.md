@@ -1,5 +1,5 @@
 # Pizzazz Pizza
-Java UI design project for Advanced Software Design and Development (cm2100)
+Java UI design project for Advanced Software Design and Development (cm2100), Robert Gordon University
 
 This Program uses Java and JavaFX to display a user interface a Pizza shop could use. It allows the user to create an order with different items, and create pizzas to order.
 
