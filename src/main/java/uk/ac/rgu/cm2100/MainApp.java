@@ -1,5 +1,5 @@
 /*
-* MainApp.java, edited by Oliver Souter 2004076
+* MainApp.java, edited by Oliver Souter
 * Component 2 Part 1 - 31/12/2021
 */
 
@@ -136,7 +136,7 @@ public class MainApp extends Application {
         orderManager.addOrder(lucysOrder);
         
         
-        stage.setTitle("Pizzazz - Oliver Souter 2004076");
+        stage.setTitle("Pizzazz");
         scene = new Scene(loadFXML("/firstscreen", null), 640, 480);
         //orderManagerScene = new Scene(loadFXML("/ordermanager", null));
         scene.getStylesheets().add("styles/default.css"); //loads a default stylesheet - helps fix some character encoding issues on some platforms...
